@@ -124,52 +124,84 @@ Unless you insert elements or tags designed SPECIFICALLY to insert a line break 
       <!--Let's create a GROCERY LIST!-->
       <p>If we wanted to link to <a href="grocery.html">another page</a> on our site, how would we do that?</p>
       <!--Create a NEW FILE (in the same HTML Cheat Sheet project folder) called "grocery.html". Let's make a grocery list!-->
+      <p>Coding makes me hungry. Look at my <a href="grocery.html">grocery site</a>.</p>
       <hr>
       <br>
 
-      <h3><u>Testing Media:</h3></u>
+      <h2><u>Testing Media:</u></h2>
       <p>Now, let's try adding media to our web pages!</p>
       <br>
       <!--The first thing we need to do is make sure all of our media files are in the SAME FOLDER as our web page .html files. So, download the media into your project folders before attempting this.-->
 
       <!--Let's start with images.-->
-      <h3><u>Testing Images:</h3></u>
+      <h3><u>Testing Images:</u></h3>
       <!--To include images on your web page, you ONLY need the <img> start tag-- no need for an end tag-- and a few attributes. The first attribute we need to use is "src", which stands for "source". This tells the browser where to locate the image we want displayed by giving it the name of the file within our project folder.-->
-      <img src="bread.jpg">
+
       <!--The next attribute we need to include is "alt", which stands for "alternative text". This gives the image a caption/ text description of the image when hovered over for people that cannot see it. This also allows a browser to read the image description out loud for those that cannot see.-->
-      <img src="bread.jpg" alt="Loaf of white bread"> <!--Note that attributes are within the same tag, no need to separate them in separate tags. -->
 
-      <!--It is good practice to organize your different media types into separate folders within your main project folder. When you do this, the browser won't be able to locate your image (or media type) by filename alone. Move these images to a folder called "images". THEN, change the img src to this: -->
-      <img src="images/bread.jpg" alt="Loaf of white bread">
-      <!--You can also go UP a folder if you needed to by typing ../ before the name of the image. See the example below.-->
-      <img src="../eggs.jpg" alt="Eggs"> <!--This image is stored in the folder one level UP from my project folder. The web browser is able to access it because of the way I wrote the syntax with that "../"-->
+      <!--Images can also be used as linked content. To do this, simply put the <a> and </a> tags around the <img> tag. -->
+      <a href="grocery.html"><img src="images/bread.jpg" alt="Loaf of white bread" width="100" height="100"></a> <!--Yuck! This size looks bad. We changed the aspect ratio!-->
+      <!--The above code shows an image, being used as a link to another page (grocery.html)-->
 
-      <!--We can also alter the size of the images using the "style" or "width" and "height" attributes.-->
+      <!--A problem with images is that they can often be WAY too large for your page. We can adjust the size by using two additional attributes in that image tag: width and height. Let's try that with the bread image above.-->
+      <!--The unit used, by default, in the width and height attributes is a PIXEL. So, the above shows 100 pixels by 100 pixels.-->
+      <!--You'll notice that our photo now looks warped. When we resized the picture, we changed the aspect ratio, which made it look smushed.-->
+      <!--100 pixels by 100 pixels made our image into a square shape, and it wasn't square originally.-->
+      <!--MAKE SURE TO KEEP THE SAME ASPECT RATIO IN IMAGES. You can figure that out by looking at the photo dimensions BEFORE adjusting the width/ height values. -->
+      <!--Let's find the dimensions for our bread.jpg image. It's 750 x 500, according to the image properties-->
+      <!--So, let's keep this dimension preserved as we adjust the size...-->
+      <a href="grocery.html"><img src="images/bread.jpg" alt="Loaf of white bread" width="187.5" height="125"></a> <!--4 times smaller-->
+      <a href="grocery.html"><img src="images/bread.jpg" alt="Loaf of white bread" width="375" height="250"></a> <!--2 times smaller-->
 
-      <!--Let's try style first. See below.-->
-      <img src="images/bread.jpg" alt="Loaf of white bread" style="width:500px; height:500px;">
-      <!--For "style" to work properly, you need to follow the above syntax exactly. Put a SEMICOLON after the width; and a SEMICOLON after the height;-->
-      <!-- The syntax for style is: style="width:size;height:size;" -->
+      <!--Cheap trick on my part. Now that you know how this works, I'll let you in on a secret: HTML will automatically adjust the aspect ratio if you adjust only one of the two (width or height) values in an img. -->
+        <a href="grocery.html"><img src="images/bread.jpg" alt="Loaf of white bread" height="500"></a>
+
+
+      <!--We can also link to external images located elsewhere online. To do this, find an image, "copy image address", and paste that image address URL in the src quotes.-->
       <br>
-      <!--Now, let's try the same thing, but this time, we'll use the "height" and "width" attributes-->
-      <img src="images/bread.jpg" alt="Loaf of white bread" width="500" height="600">
-      <!--The width and the height attributes ALWAYS define the dimensions of an image in PIXELS, so there is no need to specify the unit of measurement.-->
+      <img src="https://deichmann.scene7.com/asset/deichmann/US_01_542088_00?$rr_main$&defaultImage=default_obs" alt="Pair of dark green Crocs shoes" width="400" height="225">
+      <p>Almost forgot my <strong>Crocs</strong>! Now I'm <a href="grocery.html" target="_blank">ready to shop!</a></p>
+      <hr>
       <br>
-      <!--Let's add audio to our pages now!-->
-      <h3><u>Testing Audio:</u></h3>
-      <!--To add audio (music, sound effects, etc.) to your site, use the <audio> tag and the <source> tag together-->
-      <audio controls> <!--start with the audio tag. add the word "controls" to allow users to control (play, pause, etc. the music)-->
-        <source src="audio/grocerystoresound.mp3" type="audio/mpeg"> <!--Add the source tag nested inside to specify the location of the audio file, followed by the src attribute. THEN, add the "type" for the browser to understand what type of audio file we're using. Mp3 file type is always audio/mpeg.-->
+      <br>
 
-        <!--We can also add ANOTHER source, just in case a web browser is NOT compatible with Mp3 files. Some browsers (very rare) only use .ogg files. The type for ogg files is "ogg".-->
-        <source src="audio/grocerystoresound.ogg" type="audio/ogg">
+        <h3><u>This is what you actually came for, right?</u></h3>
+        <br>
+        <table> <!--This creates a table.-->
+          <thead> <!--The section where our column headings belong. "thead" means "table heading."-->
+            <!--Where we put the "heading" of each column-->
+            <tr> <!--This is the tag for a "table row" element. We need to use this for EVERY row of our table in the head AND the body section-->
+              <th></th> <!--This is the tag for the "table heading" element-->
+              <th></th> <!--Another heading-->
+              <th></th> <!--Another heading-->
+            </tr>
+          </thead>
+          <tbody> <!--This is where the content of our table goes. The content that comes BELOW the headings in each column.-->
+            <tr> <!--This is the first (furthest left) row of the table-->
+              <td><img src="images/thumbnails/bread.jpg" alt="Loaf of white bread"></td> <!--This goes in the first row under the first heading-->
+              <td><img src="images/thumbnails/clorox.jpg" alt="Clorox wipes"></td> <!--This goes in the second row under the second heading-->
+              <td><img src="images/thumbnails/litter.jpg" alt="Cat litter"></td> <!--This goes in the third row under the third heading-->
+            </tr>
+            <tr> <!--This is the second row of the table-->
+              <td><img src="images/thumbnails/milk.jpg" alt="Milk"></td>
+              <td><img src="images/thumbnails/tp.jpg" alt="Toilet paper"></td>
+              <td><img src="images/thumbnails/chewtoy.jpg" alt="Chew toy"></td>
+            </tr>
+            <tr> <!--This is the third row of the table-->
+              <td><img src="images/thumbnails/eggs.jpg" alt="Eggs"></td>
+              <td><img src="images/thumbnails/shampoo.jpg" alt="Shampoo"></td>
+              <td><img src="images/thumbnails/collar.jpg" alt="Dog collar"></td>
+            </tr>
+          </tbody>
+        </table>
 
-        <!--Web browsers are smart enough to know to choose between the two sources, so ALWAYS try to have BOTH mp3 AND ogg files available when using audio files on your site!-->
-      </audio>
+        <br>
+        <br>
+        <hr>
 
-
-      <!--Repeat this process with the list items on your grocery list! Add the images within the "li" tags!-->
-
+        <p style="text-align:center;">
+          <a href="index.html"><img src="images/controls/home.png" alt="home"></a>
+        </p>
   </body>
 
 
