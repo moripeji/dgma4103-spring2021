@@ -1,4 +1,4 @@
-<!--Some helpful HTML / Atom info before we get started...-->
+-Some helpful HTML / Atom info before we get started...-->
 
 <!--
 1)
@@ -36,27 +36,34 @@ Unless you insert elements or tags designed SPECIFICALLY to insert a line break 
   </head>
   <body> <!--The body element contains ALL of the content of the HTML page. EVERYTHING that users see, interact with, etc. EVERYTHING goes here.-->
     <!--Headings usually come first in the body element. Let's look at the heading sizes available. Refresh your index.html page opened in the web browser after writing out each!-->
-    <h1>HTML Cheat Sheet:</h1>
+    <h1><u>HTML Cheat Sheet</u></h1>
+    <hr>
+
     <br>
-    <h2>Testing Headings:</h2>
+
+    <h2><u>Testing Headings:</u></h2>
     <h1>Heading 1</h1> <!--The largest heading size.-->
     <h2>Heading 2</h2>
     <h3>Heading 3</h3>
     <h4>Heading 4</h4>
     <h5>Heading 5</h5>
     <h6>Heading 6</h6> <!--The smallest heading size.-->
+    <hr>
+
     <br>
     <!--Paragraphs come next.-->
     <!--The paragraph element contains blocks of text, structured together and separated from one another by blank lines or indentations.-->
     <!--The paragraph element/ tags do not JUST have to be used for text; you can use the paragraph tags for ANY grouping of related elements (like images, forms, etc.).-->
-    <h2>Testing Paragraphs:</h2>
+    <h2><u>Testing Paragraphs:</u></h2>
     <p>This is a paragraph containing only one sentence.</p>
     <p>This is also a paragraph. Notice the spacing placed between these two lines of text? That's because the paragraph tag is known as a "block-level" tag.</p>
     <p>Block-level tags take up ALL the space available to them on the web browser/ screen the web page is being viewed on. They also usually have some "padding" added around them. </p>
     <p>In HTML, "padding" refers to empty space surrounding the element and/or tags being used.</p>
+    <hr>
+
     <br> <!--This is a "line break" element. It mimics hitting "enter" on your keyboard. Notice it doesn't have a closing tag. That's because it's a "self-closing" tag, or "empty" element!-->
 
-    <h2>Testing In-Line Tags/ Elements:</h2>
+    <h2><u>Testing In-Line Tags/ Elements:</u></h2>
     <p>There are also "in-line" tags and elements. These take up ONLY the space absolutely necessary to display the content. </p>
     <p>Usually, these are links, images, and styling/ formatting tags.</p>
     <p>Two of the most common in-line tags are <em>em</em> and <strong>strong</strong>.</p>
@@ -64,6 +71,74 @@ Unless you insert elements or tags designed SPECIFICALLY to insert a line break 
     <p><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</em></p>
 
     <p><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</strong></p>
+    <hr>
+    <!--Now, let's take a look at lists.-->
+    <br>
+    <h2><u>Testing Lists:</u></h2>
+    <p>There are three types of lists in HTML: unordered (bullet lists), ordered (numbered lists), and description lists.</p>
+    <p>To create an unordered list, you need to use the "ul" element. For each bullet point, you use the "li" (list item) element.</p>
+    <!--It's good practice to put a heading over a list when applicable. Not required, but...-->
+    <h3><u>Testing Unordered Lists:</u></h3>
+    <ul> <!--The "ul" element is what we use to create a bullet list. It stands for "unordered list". -->
+      <li>This</li> <!--To get your list to create bullet points, you need to nest some "li" (list item) elements within the "ul" tags.-->
+      <li>is</li>
+      <li>an</li>
+      <li>unordered</li>
+      <li>list.</li>
+    </ul>
+
+    <p>Ordered (numbered) lists are created the exact same way. The only difference is the element name. Instead of "ul", we'll use "ol".</p>
+
+    <h3><u>Testing Ordered Lists:</u></h3>
+    <ol> <!--The "ol" element is what we use to create a numbered list. It stands for "ordered list".-->
+      <li>This</li> <!--Using the "li" (list item) element again to create our NUMBERED list items this time.-->
+      <li>is</li>
+      <li>an</li>
+      <li>ordered</li>
+      <li>list.</li>
+    </ol>
+
+    <p>Description lists are where things get a little more complicated.</p>
+    <p>To create a description list, you need the "dl" element (description list). Nested inside that, we need a "dt" element (description term). Nested inside THAT, we need a "dd" element (description definition).</p>
+    <h3><u>Testing Description Lists:</u></h3>
+      <dl> <!--The "dl" element is what we use to create a description list.-->
+        <dt>Dog</dt> <!--The "dt" element is what we use to create the description term.-->
+          <dd>A domesticated carnivorous mammal that typically has a long snout, an acute sense of smell, nonretractable claws, and a barking, howling, or whining voice.</dd> <!--The "dd" element creates the description definition.-->
+        <dt>Cat</dt>
+          <dd>A small domesticated carnivorous mammal with soft fur, a short snout, and retractable claws. It is widely kept as a pet or for catching mice, and many breeds have been developed.</dd>
+        <dt>Bird</dt>
+          <dd>A warm-blooded egg-laying vertebrate distinguished by the possession of feathers, wings, and a beak and (typically) by being able to fly.</dd>
+      </dl>
+      <hr>
+      <br>
+
+      <h2><u>Testing Links:</h2></u>
+      <p>Now, let's try out some links, which will give us our first preview into HTML attributes!</p>
+      <!--To create a link in HTML, you need to use the <a> tag. This is because a link is also called an "anchor"-->
+      <!--The syntax of a link is <a href="link">Content that links a user somewhere</a>-->
+      <a href="https://w3schools.com/">This is a link. Click this to visit the big HTML-learning resource site.</a>
+      <!--The above "href" text in the <a> tag is an ATTRIBUTE. Attributes give us some additional information about HTML elements, and they are ALWAYS located in the START TAG for any element they are being used with.-->
+      <!--"Href" is used SOLELY for links. It specifies the URL of the page the link goes to. This URL can be local, meaning it goes to another page on your OWN site, OR it can go to some external link somewhere else on the internet.-->
+      <!--HTML Links can be ABSOLUTE URLs or RELATIVE URLs. ABSOLUTE URLs are those that take you to a full web address located somewhere else on the internet, like www.something.com.RELATIVE URLs are those that take you to a LOCAL address on the SAME website, like about.html.-->
+      <p>Let's try that again.</p>
+
+      <!--Let's create a GROCERY LIST!-->
+      <p>If we wanted to link to <a href="grocery.html">another page</a> on our site, how would we do that?</p>
+      <!--Create a NEW FILE (in the same HTML Cheat Sheet project folder) called "grocery.html". Let's make a grocery list!-->
+      <p>Coding makes me hungry. Look at my <a href="grocery.html">grocery site</a>.</p>
+      <hr>
+      <br>
+
+      <h3><u>Testing Images:</u></h3>
+
+      <a href="grocery.html" target="_blank">
+        <img src="images/bread.jpg" alt="Loaf of white bread">
+      </a>
+
+      <br>
+      <img src="../eggs.jpg" alt="Eggs">
+      <br>
+      <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/whole-wheat-bread-horizontal-1-jpg-1590195849.jpg?crop=1.00xw:0.752xh;0,0.151xh&resize=1200:*" alt="Loaf of wheat bread">
 
 
 
