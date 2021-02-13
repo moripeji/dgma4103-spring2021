@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
   <head>
     <meta charset="utf-8">
-    <title>Assignment 1 Demo: COVID CLOSEUP</title>
+    <title>covid close-up: dissociation station.</title>
   </head>
-  <body>
-    <header style="font-family:courier new;">
+
+  <body style="font-family: courier new;">
+    <center>
+    <header>
       <nav>
         <hr>
         <a href="index.html">home.</a>
@@ -17,13 +20,49 @@
     </header>
     <br>
 
-    <section style="font-family:courier new;">
+    <section>
       <h1>covid closeup: separation station.</h1>
-      <p>in-depth investigation on separation and dissociation during a pandemic.</p>
+      <p>an in-depth investigation on separation and dissociation during a pandemic.</p>
       <br>
     </section>
 
     <section>
+      <h3>audio.</h3>
+      <p>for your listening pleasure.</p>
+
+      <!--To add audio to your site for a nice visitor's touch, you need to start and end the element with the <audio> tags-->
+
+      <!--Nested within the <audio> tags, you need the <source> tags, where you specify the audio files you want a browser to choose from. ALWAYS TRY TO INCLUDE BOTH A MP3 AND OGG VERSION! Some browsers don't support mp3. Browser will AUTOMATICALLY choose between the two file formats.-->
+
+      <!--Within the source tags, you need to use the src attribute (where you indicate where to find the audio file, just like we do in images) AND the type attribute, where you specify the type of audio format it is. See below.-->
+
+      <!--There are some additional attributes you should include in the audio tag for greatest user accessibility and user-friendly design, including controls (play, pause, forward, etc.) AND autoplay functionality.-->
+
+      <audio controls autoplay muted> <!--simply nest the controls and autoplay attributes in the starting audio tag. You can also add "muted" if you want the user to have to enable volume on the audio source. This is a nice accessibility touch.-->
+        <source src="media/audio/mpeg/sadlofi.mp3" type="audio/mpeg">
+        <source src="media/audio/ogg/sadlofi.ogg" type="audio/ogg">
+            Your browser does not support the audio element. <!--ALWAYS include this text so that a user who uses an outdated browser that cannot see EITHER source of audio will know of the issue.-->
+      </audio>
+    </section>
+
+    <br>
+
+    <section>
+      <h3>film.</h3>
+      <p>an experimental piece on nostalgia and family separation.</p>
+      <!--To include VIDEO in your webpage, you need to use the <video> tags. Nested within the <video> tags, you need to specify a <source> (where to find the video file) with a src attribute. You also need to use the type attribute, which tells the browser what TYPE of video file it is. See below.-->
+      <video width="720" controls> <!--Specify the width and height of video when necessary with those attributes. Adding the attribute "controls" in the start <video> tag will create a play, pause, volume, etc. set of controls for the video.-->
+        <source src="media/video/dissociationStation.mp4" type="video/mp4">
+        Your browser does not support the video tag. <!--Always include default text that indicates an error for the user's browser just in case they are unable to load the video-->
+      </video>
+    </section>
+
+    <br>
+    
+    <section>
+      <h3>stills.</h3>
+      <p>click on an image below to view at full resolution.</p>
+
       <table>
         <tr height="200"> <!--row 1 (horizontal)-->
           <td><a href="photo1.html"><img src="media/thumbnails/1.jpg" alt="image1"></a></td>
@@ -44,10 +83,13 @@
       </table>
     </section>
 
-    <footer style="font-family:courier new;">
+      <br>
+
+    <footer>
       <hr>
         professor page. assignment 1 demo. dgma4103, spring 2021.
       <hr>
     </footer>
+  </center>
   </body>
 </html>
