@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment 1 Demo: COVID CLOSEUP</title>
+  </head>
+  <body>
+    <nav>
+      <hr>
+      <a href="index.html">home.</a>
+      <a href="about.html">about.</a>
+      <a href="contact.html">contact.</a>
+      <a href="https://moripeji.wixsite.com/portfolio" target="_blank">portfolio.</a>
+      <hr>
+    </nav>
+    <br>
+    <br>
+    <h1>covid closeup: separation station.</h1>
+    <p>in-depth investigation on separation and dissociation during a pandemic.</p>
+    <br>
+    <!--Before constructing the basic table for our photo grid, we need to make thumbnail images (smaller versions of our gallery pictures) to go IN the table.
+    To do this, follow the steps:
+    1) Open Photoshop
+    2) File-> Scripts -> Image Processor
+    3) Select the folder where your ORIGINAL images are saved (this should be in your site's project folder, which should be located in your GitHub folders!)
+    4) Select where you want to save the thumbnail images (you will need a separate thumbnail image folder in your project folder)
+    5) Keep "save as JPEG checked". Resize the photos to be FAR smaller. Mine are 250px x 175px (roughly), but your dimensions will vary depending on your OWN images' resolutions. All trial and error- you will likely have to repeat this process several times.
+    6) Hit "Run" and let PS do its thing.
+    7) Navigate to where you saved these processed images. Copy the photos from the "JPEG" folder that PS creates by default. PASTE THEM INTO YOUR "THUMBNAILS" FOLDER YOU CREATED.
+    8) Once your thumbnails are properly located in the "thumbnails" folder, delete that JPEG folder. We don't need repeats.
+    9) DONE! Repeat the process until you're satisfied with how your images look, thumbnail size-wise. -->
+
+    <!--Let's NOW look at how to create the basic structure for our photo grids by learning to create a table in HTML:
+    HTML tables allow web devs to arrange data into rows and columns.
+    They also allow us to "cheat" and make grids of any content we want (like this photo grid).
+    To make a table, we need the <table> element.
+    Each table ROW (horizontal/ across) is defined by <tr> tags.
+    Each cell within the row is defined by <td> tags.
+    <td> cells can contain ANY sort of HTML element or content- text, images, lists, other tables, etc.
+    Let's create the core structure for our photo grids, using JUST text for now.-->
+
+    <table>
+      <tr> <!--The first row (horizontal) of the table-->
+        <td>photo 1</td>
+        <td>photo 2</td>
+        <td>photo 3</td>
+        <td>photo 4</td>
+        <td>photo 5</td>
+        <td>photo 6</td>
+      </tr>
+      <tr> <!--The second row (horizontal) of the table-->
+        <td>photo 7</td>
+        <td>photo 8</td>
+        <td>photo 9</td>
+        <td>photo 10</td>
+        <td>photo 11</td>
+        <td>photo 12</td>
+      </tr>
+    </table>
+
+    <br>
+
+    <!--Now that we have our core structure in place, we can add the links to the separate .html pages for these full-size photos. Do this just inside the <td> tags.-->
+    <table>
+      <tr> <!--The first row (horizontal) of the table-->
+        <td><a href="photo1.html">photo 1</a></td>
+        <td><a href="photo2.html">photo 2</a></td>
+        <td><a href="photo3.html">photo 3</a></td>
+        <td><a href="photo4.html">photo 4</a></td>
+        <td><a href="photo5.html">photo 5</a></td>
+        <td><a href="photo6.html">photo 6</a></td>
+      </tr>
+      <tr> <!--The second row (horizontal) of the table-->
+        <td><a href="photo7.html">photo 7</a></td>
+        <td><a href="photo8.html">photo 8</a></td>
+        <td><a href="photo9.html">photo 9</a></td>
+        <td><a href="photo10.html">photo 10</a></td>
+        <td><a href="photo11.html">photo 11</a></td>
+        <td><a href="photo12.html">photo 12</a></td>
+      </tr>
+    </table>
+    <br>
+
+    <!--Great! Now, let's add the thumbnail images as our linked content INSTEAD of that basic "photo X" text-->
+
+    <table> <!--This creates a table.-->
+      <tr> <!--This is the first row (horizontal) of the table-->
+        <td><a href="photo1.html"><img src="media/thumbnails/1.jpg" alt="image1"></a></td> <!--column 1 (vertical)-->
+        <td><a href="photo2.html"><img src="media/thumbnails/2.jpg"  alt="image2" height="170" width="250"></a></td> <!--column 2-->
+        <td><a href="photo3.html"><img src="media/thumbnails/3.jpg" alt="image3"></a></td> <!--column 3-->
+        <td><a href="photo4.html"><img src="media/thumbnails/4.jpg" alt="image4"></a></td> <!--column 4-->
+        <td><a href="photo5.html"><img src="media/thumbnails/5.jpg" alt="image5" height="170" width="250"></a></td> <!--column 5-->
+        <td><a href="photo6.html"><img src="media/thumbnails/6.jpg" alt="image6"></a></td> <!--column 6-->
+      </tr>
+
+      <tr> <!--This is the second row (horizontal) of the table-->
+        <td><a href="photo7.html"><img src="media/thumbnails/7.jpg" alt="image7"></a></td> <!--column 1-->
+        <td><a href="photo8.html"><img src="media/thumbnails/8.jpg" alt="image8"></a></td> <!--column 2-->
+        <td><a href="photo9.html"><img src="media/thumbnails/9.jpg" alt="image9"></a></td> <!--column 3-->
+        <td><a href="photo10.html"><img src="media/thumbnails/10.jpg" alt="image10"></a></td> <!--column 4-->
+        <td><a href="photo11.html"><img src="media/thumbnails/11.jpg" alt="image11"></a></td> <!--column 5-->
+        <td><a href="photo12.html"><img src="media/thumbnails/12.jpg" alt="image12"></a></td> <!--column 6-->
+      </tr>
+    </table>
+
+    <!--Some of your images may STILL not look right after re-sizing your thumbnails. In that case, we can re-size our images using the "width" or "height" attributes RIGHT in the <img> tag. See above.-->
+    <br>
+    <br>
+    <footer>
+      <p>professor page. assignment 1 demo. dgma4103, spring 2021.</p>
+    </footer>
+  </body>
+</html>
