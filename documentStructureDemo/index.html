@@ -1,5 +1,20 @@
 <!DOCTYPE html>
-<!--Let's take a look at HTML document structure and semantic, structural elements. These elements are designed to contain and house OTHER HTML elements, while giving organization and visual hierarchy to our code AND websites.-->
+<!--
+
+Let's take a look at HTML document structure.
+
+To create WELL-ORGANIZED, WELL-FORMATTED, and MORE READABLE CODE, AND to create a sense of VISUAL HIERARCHY and WELL-ORGANIZED DESIGN on our WEBSITE, we need to use a few things:
+
+1)HTML SEMANTIC STRUCTURAL ELEMENTS: header, main, footer (and many others nested within those elements, like NAV, ARTICLE, SECTION, ASIDE, FIGURE, etc. Used to give SEMANTIC MEANING (tell web browsers AND web developers the meaning behind your code and content) and STRUCTURE/ ORGANIZATION to HTML web pages. Contain and house other elements in HTML pages.
+
+2)HEADINGS: h1 level used for MAIN TITLE OF WEBSITE ONLY. h2-h6 used depending on importance of content. Use to convey the importance of information to our users by using heading sizes effectively. Creates the "visual hierarchy" needed for good web design accessibility.
+
+3)HTML NON-SEMANTIC STRUCTURAL ELEMENTS: div (block-level), span (in-line). Used to divide sections of content on a web page into smaller parts. No MEANING, but VERY helpful for organization and (later) formatting purposes with CSS.
+
+NOTE: Many of the layout/ organization elements will not visually appear any different in our browsers until we add CSS formatting later in the semester. Headings are an exception.
+However, our CODE will appear far more organized, and it will save a LOT of time and frustration in the future by organizing our code and document layout NOW before moving into formatting.
+
+-->
 
 <html lang="en" dir="ltr">
   <head>
@@ -14,47 +29,142 @@
     COPY AND PASTE YOUR HEADER INTO EVERY SINGLE PAGE!
     It usually houses the navigation menu, as well as the ONLY H1 HEADING (the main title of your page!). Can also contain things like a site slogan or an intro line for the website.-->
     <header>
-      <h1>Main Title of the Website</h1>
-      <p>Catchy slogan, some sort of line about the website/ company/ brand/ etc.</p>
+      <h1>Main Title of Your Website</h1>
+      <p>Catchy slogan, some sort of line about your site</p>
       <!--The navigation element is ALWAYS found in the header, see below.
       There may be another (less important) nav in the footer, but the main navigation is ALWAYS here in the header.
       Use the nav element to house links to ALL the major pages in the site, and to any important external pages elsewhere on the web.
       MUST BE ON EVERY PAGE OF A WEBSITE. COPY AND PASTE THE HEADER!
       Use the nav element ONLY for the MAIN pages/ links on your site.-->
       <!--Navs are created using a few links separated by some visual element or spacing, OR by creating an unordered list of links.-->
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="headings.html">HTML Headings</a>
-        <a href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">Semantic and Non-Semantic Elements</a>
+      <hr> <!--Creating a break in the page to keep our elements separate-->
+      <nav> <!--Navigation bar-->
+        <a href="index.html">Home</a> |
+        <a href="about.html">About</a> |
+        <a href="headings.html">HTML Headings</a> |
+        <a href="https://www.w3schools.com/html/html5_semantic_elements.asp" target="_blank">Semantic and Non-Semantic Elements</a> |
         <a href="https://www.w3schools.com/html/html_layout.asp" target="_blank">Structure and Layout Elements</a>
       </nav>
-
+      <hr> <!--Creating a break in the page to keep our elements separate-->
     </header>
 
-    <main>
-      <article>
+    <br> <!--Creating a break in the page to keep our elements separate-->
+    <!--The <main> semantic element is used to house ALL of the content of our webpage.
+    This can contain sections, articles, images, paragraphs, videos, music, links, anything at all!
+    This is the MAIN SECTION of each webpage.-->
+    <!--Many kinds of structural elements can be housed within the <main> element to give a webpage more structure and organization.
+    The most common SEMANTIC elements are ARTICLES, SECTIONS, HEADINGS, and ASIDES.
+    You can use HEADERS and FOOTERS within these tags, too. They can have their own header and footer elements.-->
+
+    <main> <!--The main content of the <body> of the page-->
+
+      <!-- Articles are used for content that is independent and self-contained.
+      Usually, this is used for blog posts, magazine articles, forum posts, etc.
+      Articles MUST HAVE A HEADING. -->
+      <article> <!--Self-contained (but related) content-->
+        <header>
+          <h2>Title of the Article</h2>
+          <p>Some introduction to the article's content</p>
+        </header>
         <section>
-
+          <h3>Article Section 1 Title</h3> <!--Note the use of h3-- not as important as the title of the article, which is in h2. This helps add a sense of "hierarchy"!-->
+          <p>Content of section 2 of the article</p>
         </section>
+        <section>
+          <h3>Article Section 2 Title</h3>
+          <p>Content of section 2 of the article</p>
+        </section>
+        <footer>
+          <p><small>&copy; Article copyright information</small></p>
+        </footer>
       </article>
+      <hr> <!--Creating a break in the page to keep our elements separate-->
+      <br> <!--Creating a break in the page to keep our elements separate-->
 
-      <section>
-
+      <!--The next semantic element that is used to give organization and structure in HTML is the SECTION element.
+      This is used for thematic groupings of related content.
+      Photo section, video section, audio section, etc.
+      Chapter one, chapter two, chapter three, etc.
+      These section elements help to BREAK large chunks of main content into manageable sections and smaller subsections.
+      Creates hierarchy and structure on a page (and in code!).-->
+      <section> <!--Thematic grouping of content-->
+        <header>
+          <h2>Title of Section 1</h2>
+          <p>Section 1 information</p>
+        </header>
+        <p>Content of section goes here</p>
       </section>
 
       <section>
-
+        <header>
+          <h2>Title of Section 2</h2>
+          <p>Some sort of line about the section</p>
+        </header>
+        <p>Content of section goes here</p>
       </section>
+      <!--Sections can ALSO be nested within one another.-->
+        <section>
+          <head>
+            <h3>Title of Subsection 2.1</h3>
+            <p>Subsection information</p>
+          </head>
+          <p>Content of subsection goes here</p>
+        </section>
+      <hr> <!--Creating a break in the page to keep our elements separate-->
+      <br> <!--Creating a break in the page to keep our elements separate-->
 
-      <section>
+      <!--The next semantic element that is often used within <main> is the ASIDE element.
+      This is used for content that is RELATED to the content around it, but separate.
+      Can be useful for ADVERTISEMENTS and ad banners, photos, photo captions, additional sidebar content, or any other content that can stand on its own.
+      Asides can have sections, headers, navs, and footers, too! Nest them inside if you want to use them!-->
+      <aside> <!--Sidebar-->
+        <section>
+          <header>
+            <h2>Need More Help with HTML Structure?</h2>
+            <p>This overview should help!</p>
+            <nav> <!--Navigation menus can also be lists-->
+              <ul>
+                <li>
+                  <a href="https://codepen.io/mi-lee/post/an-overview-of-html5-semantics">Overview of HTML Semantics</a>
+                </li>
+              </ul>
+            </nav>
+          </header>
 
-      </section>
+          <!--We can ADD STRUCTURE and ORGANIZATION to photo displays (like your photo gallery pages) by using the <figure> element.
+          A <figure> element contains two nested elements: <img> (a typical image tag) and <figcaption> (the caption for the photo).
+          See below.-->
+          <figure>
+            <img src="https://almosthumor.files.wordpress.com/2011/09/html5demo1.jpg" alt="HTML Layout example">
+            <figcaption>Example of an HTML layout shown above</figcaption>
+          </figure>
+        </section>
+      </aside>
     </main>
 
+    <hr> <!--Creating a break in the page to keep our elements separate-->
+    <br> <!--Creating a break in the page to keep our elements separate-->
+    <!--The footer element is usually used for copyright info on the site.
+      It can also be used to house additional- NOT THE MAIN!- navigation links.
+      Some websites also include social media links here.-->
     <footer>
-
+      <nav>
+        <a href="https://www.w3schools.org/" target="_blank">W3 Schools Site</a>
+      </nav>
+      <p>&copy; Copyright Info. Year.</p>
     </footer>
 
+    <!--TASK:
+      Edit Assignment 1 sites to include:
+        1) HEADING SIZES- Proper use of heading sizes for visual hierarchy.
+        2) SEMANTIC STRUCTURAL ELEMENTS- <header>, <main>, <footer>, <section>, <figure>, etc.
+          A) Create a <header> with a TITLE (h1 heading size), some one-liner text about the site (with <p>), and a <nav> that includes the links to the pages of your site (index/ homepage, about, Wordpress). THIS SHOULD BE ON EVERY PAGE!
+          B) Re-position the content of your page to fit within different semantic structural elements. Use <main>, <section>, etc. EVERY page should use this structure and organization!
+          C) Add captions to your photo gallery pages (EACH ONE) by using the <figure> and <figcaption> elements.
+        3) NON-SEMANTIC STRUCTURAL ELEMENTS- <div> and <span>
+          A) Add <div> and <span> containers where you think could be necessary for later formatting.
+          B) Make sure to include the "class" and/or "id" attributes!
+        4) If stuck, review materials posted to Bb and/or Professor Page's code!
+      -->
   </body>
 </html>
