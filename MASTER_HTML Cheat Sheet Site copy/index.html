@@ -1,0 +1,208 @@
+<!--Some helpful HTML / Atom info before we get started...-->
+
+<!--
+1)
+<!--This is a comment. Users can't see it, and neither can your web browser. This is JUST for you to make notes to yourself throughout your code.-->
+<!--Note the syntax for a comment. Less than symbol, exclamation point, dash dash, comment, dash dash, greater than symbol-->
+
+<!--
+2)
+<!--HTML pages are made of content, controlled and displayed differently by ELEMENTS. ELEMENTS are made of TAGS-- the basic building blocks of HTML.-->
+<!--The SYNTAX of an ELEMENT is: <starttag> content </endtag> -->
+<!--The SYNTAX of a TAG is: <tagname> (for start tags) AND </tagname> (for end tags). Note the "/" symbol in the end tag. This CLOSES the tag. Don't forget that! -->
+<!--Tags always occur in pairs, unless they are self-closing tags (AKA "empty elements"). A good example of this is the <br> or "line break" element/ tag. -->
+<!--Different elements (made of different tags) display content DIFFERENTLY on our web page. Which is why there are so many!-->
+<!--Some elements give the HTML document a structure and shape. Others communicate info to the web browser. Others display ALL the content for us and a user to see on our page. Others display that content differently.-->
+
+<!--
+3)
+It doesn't matter how many times you press "enter" on your keyboard as you write HTML pages. Atom doesn't care, and neither does your web browser.
+You can
+space
+your
+content
+however you like. It will still be read the same way as if it was neatly organized in one line.
+Unless you insert elements or tags designed SPECIFICALLY to insert a line break or some padding/ space before and after the content they are displaying, the web browser will smash all content right up against each other on your web page.
+-->
+
+<!--Ok. Time to get started. -->
+
+<!--All HTML documents start with a DOCTYPE declaration. This is NOT an element or tag, it is merely a "declaration" statement (like a comment). It lets the BROWSER know what kind of HTML we are using so that our web pages will open and work properly on modern web browsers. -->
+<!DOCTYPE html>
+<html> <!--The HTML element is the parent/ root element to EVERYTHING contained in an HTML document. Contains all elements, tags, content, etc. nested within it.-->
+  <head> <!--The head element is where information about your HTML document goes. For the BROWSER to read, not for users to read.-->
+    <meta charset="utf-8"> <!--This specifies the character set we want to use on our browsers to display our content. Utf-8 is the default for English alphabet characters.-->
+    <title>HTML Cheat Sheet</title> <!--This specifies the TITLE of our web page that will pop up in the web browser's title bar and on tabs in the browser. Will NOT be contained on our actual webpage itself-- that's what headings are for.-->
+  </head>
+  <body> <!--The body element contains ALL of the content of the HTML page. EVERYTHING that users see, interact with, etc. EVERYTHING goes here.-->
+    <!--Headings usually come first in the body element. Let's look at the heading sizes available. Refresh your index.html page opened in the web browser after writing out each!-->
+    <h1><u>HTML Cheat Sheet</u></h1>
+    <hr>
+
+    <br>
+
+    <h2><u>Testing Headings:</u></h2>
+    <h1>Heading 1</h1> <!--The largest heading size.-->
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6> <!--The smallest heading size.-->
+    <hr>
+
+    <br>
+    <!--Paragraphs come next.-->
+    <!--The paragraph element contains blocks of text, structured together and separated from one another by blank lines or indentations.-->
+    <!--The paragraph element/ tags do not JUST have to be used for text; you can use the paragraph tags for ANY grouping of related elements (like images, forms, etc.).-->
+    <h2><u>Testing Paragraphs:</u></h2>
+    <p>This is a paragraph containing only one sentence.</p>
+    <p>This is also a paragraph. Notice the spacing placed between these two lines of text? That's because the paragraph tag is known as a "block-level" tag.</p>
+    <p>Block-level tags take up ALL the space available to them on the web browser/ screen the web page is being viewed on. They also usually have some "padding" added around them. </p>
+    <p>In HTML, "padding" refers to empty space surrounding the element and/or tags being used.</p>
+    <hr>
+
+    <br> <!--This is a "line break" element. It mimics hitting "enter" on your keyboard. Notice it doesn't have a closing tag. That's because it's a "self-closing" tag, or "empty" element!-->
+
+    <h2><u>Testing In-Line Tags/ Elements:</u></h2>
+    <p>There are also "in-line" tags and elements. These take up ONLY the space absolutely necessary to display the content. </p>
+    <p>Usually, these are links, images, and styling/ formatting tags.</p>
+    <p>Two of the most common in-line tags are <em>em</em> and <strong>strong</strong>.</p>
+
+    <p><em>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</em></p>
+
+    <p><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</strong></p>
+    <hr>
+    <!--Now, let's take a look at lists.-->
+    <br>
+    <h2><u>Testing Lists:</u></h2>
+    <p>There are three types of lists in HTML: unordered (bullet lists), ordered (numbered lists), and description lists.</p>
+    <p>To create an unordered list, you need to use the "ul" element. For each bullet point, you use the "li" (list item) element.</p>
+    <!--It's good practice to put a heading over a list when applicable. Not required, but...-->
+    <h3><u>Testing Unordered Lists:</u></h3>
+    <ul> <!--The "ul" element is what we use to create a bullet list. It stands for "unordered list". -->
+      <li>This</li> <!--To get your list to create bullet points, you need to nest some "li" (list item) elements within the "ul" tags.-->
+      <li>is</li>
+      <li>an</li>
+      <li>unordered</li>
+      <li>list.</li>
+    </ul>
+
+    <p>Ordered (numbered) lists are created the exact same way. The only difference is the element name. Instead of "ul", we'll use "ol".</p>
+
+    <h3><u>Testing Ordered Lists:</u></h3>
+    <ol> <!--The "ol" element is what we use to create a numbered list. It stands for "ordered list".-->
+      <li>This</li> <!--Using the "li" (list item) element again to create our NUMBERED list items this time.-->
+      <li>is</li>
+      <li>an</li>
+      <li>ordered</li>
+      <li>list.</li>
+    </ol>
+
+    <p>Description lists are where things get a little more complicated.</p>
+    <p>To create a description list, you need the "dl" element (description list). Nested inside that, we need a "dt" element (description term). Nested inside THAT, we need a "dd" element (description definition).</p>
+    <h3><u>Testing Description Lists:</u></h3>
+      <dl> <!--The "dl" element is what we use to create a description list.-->
+        <dt>Dog</dt> <!--The "dt" element is what we use to create the description term.-->
+          <dd>A domesticated carnivorous mammal that typically has a long snout, an acute sense of smell, nonretractable claws, and a barking, howling, or whining voice.</dd> <!--The "dd" element creates the description definition.-->
+        <dt>Cat</dt>
+          <dd>A small domesticated carnivorous mammal with soft fur, a short snout, and retractable claws. It is widely kept as a pet or for catching mice, and many breeds have been developed.</dd>
+        <dt>Bird</dt>
+          <dd>A warm-blooded egg-laying vertebrate distinguished by the possession of feathers, wings, and a beak and (typically) by being able to fly.</dd>
+      </dl>
+      <hr>
+      <br>
+
+      <h2><u>Testing Links:</h2></u>
+      <p>Now, let's try out some links, which will give us our first preview into HTML attributes!</p>
+      <!--To create a link in HTML, you need to use the <a> tag. This is because a link is also called an "anchor"-->
+      <!--The syntax of a link is <a href="link">Content that links a user somewhere</a>-->
+      <a href="https://w3schools.com/">This is a link. Click this to visit the big HTML-learning resource site.</a>
+      <!--The above "href" text in the <a> tag is an ATTRIBUTE. Attributes give us some additional information about HTML elements, and they are ALWAYS located in the START TAG for any element they are being used with.-->
+      <!--"Href" is used SOLELY for links. It specifies the URL of the page the link goes to. This URL can be local, meaning it goes to another page on your OWN site, OR it can go to some external link somewhere else on the internet.-->
+      <!--HTML Links can be ABSOLUTE URLs or RELATIVE URLs. ABSOLUTE URLs are those that take you to a full web address located somewhere else on the internet, like www.something.com.RELATIVE URLs are those that take you to a LOCAL address on the SAME website, like about.html.-->
+      <p>Let's try that again.</p>
+      <!--Let's create a GROCERY LIST!-->
+      <p>If we wanted to link to <a href="grocery.html">another page</a> on our site, how would we do that?</p>
+      <!--Create a NEW FILE (in the same HTML Cheat Sheet project folder) called "grocery.html". Let's make a grocery list!-->
+      <p>Coding makes me hungry. Look at my <a href="grocery.html">grocery site</a>.</p>
+      <hr>
+      <br>
+
+      <h2><u>Testing Media:</u></h2>
+      <p>Now, let's try adding media to our web pages!</p>
+      <br>
+      <!--The first thing we need to do is make sure all of our media files are in the SAME FOLDER as our web page .html files. So, download the media into your project folders before attempting this.-->
+
+      <!--Let's start with images.-->
+      <h3><u>Testing Images:</u></h3>
+      <!--To include images on your web page, you ONLY need the <img> start tag-- no need for an end tag-- and a few attributes. The first attribute we need to use is "src", which stands for "source". This tells the browser where to locate the image we want displayed by giving it the name of the file within our project folder.-->
+
+      <!--The next attribute we need to include is "alt", which stands for "alternative text". This gives the image a caption/ text description of the image when hovered over for people that cannot see it. This also allows a browser to read the image description out loud for those that cannot see.-->
+
+      <!--Images can also be used as linked content. To do this, simply put the <a> and </a> tags around the <img> tag. -->
+      <a href="grocery.html"><img src="images/bread.jpg" alt="Loaf of white bread" width="100" height="100"></a> <!--Yuck! This size looks bad. We changed the aspect ratio!-->
+      <!--The above code shows an image, being used as a link to another page (grocery.html)-->
+
+      <!--A problem with images is that they can often be WAY too large for your page. We can adjust the size by using two additional attributes in that image tag: width and height. Let's try that with the bread image above.-->
+      <!--The unit used, by default, in the width and height attributes is a PIXEL. So, the above shows 100 pixels by 100 pixels.-->
+      <!--You'll notice that our photo now looks warped. When we resized the picture, we changed the aspect ratio, which made it look smushed.-->
+      <!--100 pixels by 100 pixels made our image into a square shape, and it wasn't square originally.-->
+      <!--MAKE SURE TO KEEP THE SAME ASPECT RATIO IN IMAGES. You can figure that out by looking at the photo dimensions BEFORE adjusting the width/ height values. -->
+      <!--Let's find the dimensions for our bread.jpg image. It's 750 x 500, according to the image properties-->
+      <!--So, let's keep this dimension preserved as we adjust the size...-->
+      <a href="grocery.html"><img src="images/bread.jpg" alt="Loaf of white bread" width="187.5" height="125"></a> <!--4 times smaller-->
+      <a href="grocery.html"><img src="images/bread.jpg" alt="Loaf of white bread" width="375" height="250"></a> <!--2 times smaller-->
+
+      <!--Cheap trick on my part. Now that you know how this works, I'll let you in on a secret: HTML will automatically adjust the aspect ratio if you adjust only one of the two (width or height) values in an img. -->
+        <a href="grocery.html"><img src="images/bread.jpg" alt="Loaf of white bread" height="500"></a>
+
+
+      <!--We can also link to external images located elsewhere online. To do this, find an image, "copy image address", and paste that image address URL in the src quotes.-->
+      <br>
+      <img src="https://deichmann.scene7.com/asset/deichmann/US_01_542088_00?$rr_main$&defaultImage=default_obs" alt="Pair of dark green Crocs shoes" width="400" height="225">
+      <p>Almost forgot my <strong>Crocs</strong>! Now I'm <a href="grocery.html" target="_blank">ready to shop!</a></p>
+      <hr>
+      <br>
+      <br>
+
+        <h3><u>This is what you actually came for, right?</u></h3>
+        <br>
+        <table> <!--This creates a table.-->
+          <thead> <!--The section where our column headings belong. "thead" means "table heading."-->
+            <!--Where we put the "heading" of each column-->
+            <tr> <!--This is the tag for a "table row" element. We need to use this for EVERY row of our table in the head AND the body section-->
+              <th></th> <!--This is the tag for the "table heading" element-->
+              <th></th> <!--Another heading-->
+              <th></th> <!--Another heading-->
+            </tr>
+          </thead>
+          <tbody> <!--This is where the content of our table goes. The content that comes BELOW the headings in each column.-->
+            <tr> <!--This is the first (furthest left) row of the table-->
+              <td><img src="images/thumbnails/bread.jpg" alt="Loaf of white bread"></td> <!--This goes in the first row under the first heading-->
+              <td><img src="images/thumbnails/clorox.jpg" alt="Clorox wipes"></td> <!--This goes in the second row under the second heading-->
+              <td><img src="images/thumbnails/litter.jpg" alt="Cat litter"></td> <!--This goes in the third row under the third heading-->
+            </tr>
+            <tr> <!--This is the second row of the table-->
+              <td><img src="images/thumbnails/milk.jpg" alt="Milk"></td>
+              <td><img src="images/thumbnails/tp.jpg" alt="Toilet paper"></td>
+              <td><img src="images/thumbnails/chewtoy.jpg" alt="Chew toy"></td>
+            </tr>
+            <tr> <!--This is the third row of the table-->
+              <td><img src="images/thumbnails/eggs.jpg" alt="Eggs"></td>
+              <td><img src="images/thumbnails/shampoo.jpg" alt="Shampoo"></td>
+              <td><img src="images/thumbnails/collar.jpg" alt="Dog collar"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br>
+        <br>
+        <hr>
+
+        <p style="text-align:center;">
+          <a href="index.html"><img src="images/controls/home.jpg" alt="home"></a>
+        </p>
+  </body>
+
+
+</html>
