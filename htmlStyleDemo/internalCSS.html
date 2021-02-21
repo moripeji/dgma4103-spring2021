@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Internal CSS</title>
+
+    <!--Create your internal CSS <style> here in the <head> section!-->
+
   </head>
   <body>
     <header>
@@ -23,26 +26,54 @@
     <main>
       <section>
         <h2>Internal CSS</h2>
-        <p></p>
+        <p>Internal CSS is defined in the "head" section of an HTML page, within the "style" element.</p>
+        <p>Internal CSS defines a style for an entire webpage and each instance of specified elements. It is NOT like inline CSS where only one case of an element is affected at a time.</p>
+        <p>Internal CSS will only apply to one HTML document. You need to recreate the same internal CSS on each page if you want the same style across a website.</p>
+        <p>Internal CSS is created by using the "style" ELEMENT.</p>
+        <p>Look at the example below for the syntax.</p>
+        <figure>
+          <img src="media/internal/internalSyntax.png" alt="internal CSS syntax">
+          <figcaption>The above example sets the text color of <strong>ALL</strong> of the "h1" elements (on that page) to blue, and the text color of <strong>ALL</strong> the "p" elements to red. The page will also be displayed with a "powderblue" background color.</figcaption>
+        </figure>
+        <p>To create the style element in your HTML document and apply internal CSS successfully, write the tag of the element you want to style, followed by the CSS property: value; within curly brackets.</p>
+        <p>tagname {property: value;}</p>
       </section>
 
       <br>
 
       <section>
         <h3>Internal CSS Examples</h3>
-        <p></p>
-        <figure>
-          <img src="" alt="">
-          <figcaption></figcaption>
-        </figure>
-        <figure>
-          <img src="" alt="">
-          <figcaption></figcaption>
-        </figure>
-        <figure>
-          <img src="" alt="">
-          <figcaption></figcaption>
-        </figure>
+        <p>Take a look at the following examples of internal CSS in action.</p>
+
+        <ul>
+          <li>
+            Example 1:
+            <figure>
+              <img src="media/internal/internalExample1.png" alt="Internal CSS example">
+              <figcaption>Internal CSS: Example 1</figcaption>
+            </figure>
+          </li>
+
+        <br>
+
+          <li>
+            Example 2:
+            <figure>
+              <img src="media/internal/internalExample2.png" alt="Internal CSS example">
+              <figcaption>Internal CSS: Example 2</figcaption>
+            </figure>
+          </li>
+
+        <br>
+
+          <li>
+            Example 3:
+            <figure>
+              <img src="media/internal/internalExample3.png" alt="Internal CSS example">
+              <figcaption>Internal CSS: Example 3</figcaption>
+            </figure>
+          </li>
+        </ul>
       </section>
 
       <br>
@@ -50,13 +81,16 @@
 
       <section>
         <h3>Internal CSS Exercises</h3>
-        <p></p>
+        <p>Complete the following steps to customize this HTML page (internalCSS.html) in CodePen!</p>
           <ol>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Use CSS to set the background color of the document (body) to red.</li>
+            <li>Use CSS to set the font of the document to "arial".</li>
+            <li>Use CSS to set the text color of the document to yellow.</li>
+            <li>Use CSS to make a solid blue, 1px thick, border around all figures.</li>
+            <li>Use CSS to make the "h2" headings green.</li>
+            <li>Use CSS to resize all images to be 50% width.</li>
           </ol>
+        <p>Once you are DONE, save your CodePen document. Send the link to Blackboard's chat for Professor Page's review.</p>
       </section>
 
       <br>
