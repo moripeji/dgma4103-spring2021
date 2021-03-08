@@ -20,22 +20,49 @@
     1) Create a new CSS folder. Call it lowercase "css".
     2) Create a new CSS file. Just like we have to specify ".html" when we save a new webpage, we need to specify ".css" in the filename. Call it something like "test.css"
     3) Point to this "test.css" file in the href attribute above. We need to link to this file just like we do to images. Name of folder/nameOfCSSFile.css. So, here, it would be "css/test.css"
+    4) Open the test.css file. A CSS file contains "rules", which are made of SELECTORS and DECLARATIONS.
+    A SELECTOR refers to the elements we are styling on a webpage. For example, if we apply style to the h1 elements of a webpage, the h1 is our SELECTOR.
+    A DECLARATION is a property: value.
+    5) Let's write our first RULE. Let's turn the h1 elements ORANGE, and CENTER-ALIGN them.
+    h1 is our selector, the DECLARATIONS are color: orange (property and value) and text-align: center.
+
+    THREE TYPES OF SELECTORS:
+    1) TYPE SELECTORS- WHAT WE'VE BEEN USING. The name of an element-- targets EVERY element of that type on the page.
+      Ex: The selector of "p" targets EVERY paragraph on a page.
+    2) DESCENDANT SELECTORS- allows us to style NESTED elements.
+      Ex: What if we only wanted to style paragraphs within the HEADER element, not EVERY paragraph on the entire webpage?
+        Adjust the selector to reflect this rule:
+        Start with the first element (header), SPACE, element we want to style (p).
+        header p
+
+        Can also use this trick to affect single words and/or letters of words by using SPAN tags
+
+    3) CLASS SELECTORS-
+      Targets specific "classes" of a webpage.
+      Use the "class" attribute to distinguish elements from one another and re-apply certain styles to different elements on a webpage.
 
 
   -->
   </head>
-  
+
   <body>
     <header>
       <h1>CSS Introduction</h1>
-      <p>Let's learn the basics of CSS!</p>
+      <p>Let's <span>learn</span> the basics of CSS!</p>
       <nav>
-        <a href="index.html">Home</a>
-        <a href="#"></a>
-        <a href="#"></a>
+        <a href="index.html">Home</a> |
+        <a href="https://www.w3schools.com/css/default.asp">CSS Reference</a> |
+        <a href="https://www.w3schools.com/css/css_intro.asp">CSS Introduction</a> |
+        <a href="https://www.w3schools.com/css/css_syntax.asp">CSS Syntax</a> |
+        <a href="https://www.w3schools.com/css/css_selectors.asp">CSS Selectors</a> |
+        <a href="https://www.w3schools.com/css/css_howto.asp">CSS How To</a>
       </nav>
 
     </header>
+
+    <br>
+    <hr>
+    <br>
 
     <main>
       <section>
@@ -50,6 +77,10 @@
           <li>External stylesheets are stored in <strong>CSS files</strong></li>
         </ul>
       </section>
+
+      <br>
+      <hr>
+      <br>
 
       <section>
         <h2>What does CSS look like?</h2>
@@ -95,6 +126,10 @@
         <p>As you can see, by creating just a few different stylesheets, we can dramatically alter the same HTML page!</p>
       </section>
 
+      <br>
+      <hr>
+      <br>
+
       <section>
         <h2>Why Use CSS?</h2>
         <p>CSS is used to define <strong>styles</strong> for your webpages, including:</p>
@@ -109,6 +144,86 @@
           <li>HTML was created solely to describe the content of a webpage- adding tags like "font" and color attributes caused a <em>nightmare</em> for web developers</li>
           <li>CSS' creation resolved this style/ formatting issue when it took over!</li>
         </ul>
+      </section>
+
+      <br>
+      <hr>
+      <br>
+
+      <section>
+        <h2>CSS Syntax</h2>
+        <p>A CSS <strong>rule</strong> consists of a <em>selector</em> and a <em>declaration block</em>. See the example below for how CSS is written in an external stylesheet:</p>
+        <figure>
+          <img src="https://www.w3schools.com/css/selector.gif" alt="CSS Syntax example">
+          <figcaption>Example of CSS Syntax</figcaption>
+        </figure>
+        <ul>
+          <li>The selector points to the HTML element you want to style.</li>
+          <li>The declaration block contains one or more declarations, separated by semicolons.</li>
+          <li>Multiple CSS declarations are separated by semicolons, and declaration blocks are surrounded by curly braces.</li>
+        </ul>
+        <p>See the additional example of CSS syntax below:</p>
+        <figure>
+          <img src="media/cssSyntaxExample.png" alt="CSS Syntax example">
+          <figcaption>Example of CSS Syntax</figcaption>
+        </figure>
+      </section>
+
+      <br>
+      <hr>
+      <br>
+
+      <section>
+        <h2>CSS Selectors</h2>
+        <p>A CSS <strong>selector</strong> is the first part of a CSS rule. It <em>selects</em> the HTML element(s) you want to style.
+        <p>Several different CSS selectors are used to "find" (or select) the HTML elements you want to style:</p>
+        <ul>
+          <li><b>Simple selectors:</b> select elements by name, id, or class.</li>
+          <li><b>Combinator selectors:</b> select elements based on a specific relationship between them.</li>
+          <li><b>Pseudo-class selectors:</b> select elements based on a certain state.</li>
+          <li><b>Pseudo-elements selectors:</b> select and style a PART of an element.</li>
+          <li><b>Attribute selectors:</b> select elements based on an attribute or attribute value.</li>
+        </ul>
+        <p>See the additional example of CSS syntax below:</p>
+        <figure>
+          <img src="media/cssSyntaxExample.png" alt="CSS Syntax example">
+          <figcaption>Example of CSS Syntax</figcaption>
+        </figure>
+        <br>
+        <h3>Types of Selectors</h3>
+        <ol>
+          <li>
+            <img src="media/elementSelector.png" alt="CSS Element Selector">
+          </li>
+          <br>
+          <li>
+            <img src="media/idSelector.png" alt="CSS id Selector">
+          </li>
+          <br>
+          <li>
+            <img src="media/classSelector.png" alt="CSS class Selector">
+          </li>
+          <br>
+          <li>
+            <img src="media/universalSelector.png" alt="CSS Universal Selector">
+          </li>
+          <br>
+          <li>
+            <img src="media/groupingSelector.png" alt="CSS Grouping Selector">
+          </li>
+          <br>
+          <li>
+            <img src="media/allSelectors.png" alt="CSS Selectors Summary">
+          </li>
+        </ol>
+      </section>
+
+      <br>
+      <hr>
+      <br>
+
+      <section>
+        <h3>External CSS Exercises: Selectors</h3>
       </section>
 
     </main>
