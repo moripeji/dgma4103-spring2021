@@ -1,0 +1,16 @@
+header{
+  text-align: center;
+  background-color: #e7ffff;
+}
+footer{
+  text-align: center;
+  background-color: #e7ffff;
+}
+
+body{
+  font-family: Verdana;
+}
+
+h1{
+  color: red;
+}
